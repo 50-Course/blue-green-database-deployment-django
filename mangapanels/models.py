@@ -12,6 +12,7 @@ class Manga(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     published = models.DateField()
+    adapted = models.BooleanField(null=True, blank=True)
 
     def __str__(self) -> str:
         return f'Title: {self.title}, Author: {self.author}, Published: {self.published}'
